@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Billing System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/land.css') }}">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Floating Background Image -->
+    <img src="{{ url_for('static', filename='credit.png') }}" class="hero-img">
+
+    <!-- Top Title -->
+    <h1 class="title">Credit Card Billing System</h1>
+
+    <!-- Main Content -->
+    <div class="hero">
+      <p class="tagline">
+        Manage your credit, track spending, and stay in control.
+      </p>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <a href="/login" class="btn login-btn">Login</a>
+        <a href="/signup" class="btn signup-btn">Sign Up</a>
+      </div>
+    </div>
+    
+    <!-- Bottom Text -->
+    <p class="footer-text">One of the most trusted billing systems</p>
+
+  </div>
+
+</body>
+</html>

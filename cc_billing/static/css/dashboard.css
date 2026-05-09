@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Card Section */
+.card-section {
+  margin-top: 20px;
+}
+
+/* Credit Card UI */
+.credit-card {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.credit-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-name {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.card-number {
+  margin: 15px 0;
+  letter-spacing: 2px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-details p {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Summary Boxes */
+.summary {
+  display: flex;
+  gap: 15px;
+}
+
+.box {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* Actions */
+.actions {
+  margin: 25px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  background: #2563eb;
+  transform: scale(1.03);
+}
+
+/* Transactions */
+.transactions {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.debit {
+  color: #ef4444;
+}
+
+.credit {
+  color: #22c55e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

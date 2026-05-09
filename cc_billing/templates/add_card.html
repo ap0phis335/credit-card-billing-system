@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Card</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/add.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card-box">
+
+      <h1>Add Your Card</h1>
+      <p class="subtitle">Enter your card details to continue</p>
+
+      <form method="POST" action="/add-card">
+
+        <div class="input-group">
+          <label>Card Name</label>
+          <input type="text" name="card_name" placeholder="e.g. HDFC Platinum" required>
+        </div>
+
+        <div class="input-group">
+          <label>Last 4 Digits</label>
+          <input type="text" name="last4" maxlength="4" placeholder="1234" required>
+        </div>
+
+        <div class="input-group">
+          <label>Credit Limit (₹)</label>
+          <input type="number" name="limit" placeholder="50000" required>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label>Billing Date</label>
+            <input type="number" name="billing_date" placeholder="1" min="1" max="31" required>
+          </div>
+
+          <div class="input-group">
+            <label>Due Date</label>
+            <input type="number" name="due_date" placeholder="15" min="1" max="31" required>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Save Card</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</body>
+</html>

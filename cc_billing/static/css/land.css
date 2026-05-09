@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  position: relative; /* important for layering */
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+  z-index: 1;
+}
+
+/* Floating Image */
+.hero-img {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  opacity: 0.12;
+
+  box-shadow: 0 25px 80px rgba(59, 130, 246, 0.35);
+
+  animation: float 4s ease-in-out infinite;
+
+  z-index: 0; /* behind everything */
+}
+
+/* Title */
+.title {
+  position: relative;
+  z-index: 2;
+  font-size: 40px;
+  margin-bottom: 40px;
+  animation: slideDown 1s ease;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #94a3b8;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Login Button */
+.login-btn {
+  background: transparent;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.login-btn:hover {
+  background: #3b82f6;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Signup Button */
+.signup-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer-text {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+  z-index: 2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
